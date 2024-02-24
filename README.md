@@ -5,17 +5,22 @@ We have used two case classes here one is User which will store id and name
 and another case class is Tweet which will store text, user, hashtags and likes.
 
 Functions:
+
 Feature Extraction:
+
 The extractFeature() function will take the raw data from Tweet and return a tuple of five
 element which are length, numHashtags, userId, likes and a constant value of 1.0f. The
 constant value is generally used as an intercept term in linear regression models.
 Feature Scaling:
+
 To ensure all feature are in the same scale we have used the function scaleFeatures(). It
 returns an RDD of FeatureTuple with five elements which are scaledF1, scaledF2, scaledF3,
 scaledF4 and likes. The likes part has not been scaled as it is a dependent variable.
 Cost:
+
 The cost() function will return the mean squared error J((θ). It is a single float value.
 Gradient Descent:
+
 The gradientDescent() function will return our resulting theta. Firstly, it initializes the error
 by using the cost() function. Afterwards, it keeps on iterating till the error change is less than
 sigma. While iterating with respect to the each parameters (f1, f2, f3, f4, likes) it will
