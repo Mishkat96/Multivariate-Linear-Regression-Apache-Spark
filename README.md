@@ -11,14 +11,17 @@ Feature Extraction:
 The extractFeature() function will take the raw data from Tweet and return a tuple of five
 element which are length, numHashtags, userId, likes and a constant value of 1.0f. The
 constant value is generally used as an intercept term in linear regression models.
+
 Feature Scaling:
 
 To ensure all feature are in the same scale we have used the function scaleFeatures(). It
 returns an RDD of FeatureTuple with five elements which are scaledF1, scaledF2, scaledF3,
 scaledF4 and likes. The likes part has not been scaled as it is a dependent variable.
+
 Cost:
 
 The cost() function will return the mean squared error J((θ). It is a single float value.
+
 Gradient Descent:
 
 The gradientDescent() function will return our resulting theta. Firstly, it initializes the error
